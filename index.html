@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center">
+        <!-- Everything is in the center -->
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary mt-5 " data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <!-- Margin top give -->
+            Payment
+        </button>
+
+        <!-- Modal start -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-info">
+                        <!-- Background color changed -->
+                        <h5 class="modal-title text-white" id="exampleModalLabel">Payment Form</h5>
+                        <!-- Text color changed -->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- First part start-->
+                        <div class="row mb-3">
+                            <!-- Margin bottom give -->
+                            <div class="col">
+                                <label for="formGroupExampleInput" class="form-label">First Name</label>
+                                <!-- First name and placeholder changed -->
+                                <input type="text" class="form-control" id="formGroupExampleInput"
+                                    placeholder="First Name">
+                            </div>
+                            <div class="col">
+                                <label for="formGroupExampleInput" class="form-label">Last Name</label>
+                                <!-- Last name and placeholder changed -->
+                                <input type="text" class="form-control" id="formGroupExampleInput"
+                                    placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <!-- Margin bottom give -->
+                            <div class="col">
+                                <label for="inputEmail4" class="form-label">Email</label>
+                                <!-- Email and placeholder changed -->
+                                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <!-- Margin bottom give -->
+                            <div class="col-12">
+                                <label for="inputAddress" class="form-label">Address</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="Address">
+                            </div>
+                        </div>
+                            <!-- First part end-->
+                            <!-- Second Part start -->
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active bg-info text-white" id="home-tab" data-bs-toggle="tab"
+                                    data-bs-target="#home-tab-pane" type="button" role="tab"
+                                    aria-controls="home-tab-pane" aria-selected="true">Credit Card</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                    aria-controls="profile-tab-pane" aria-selected="false">Paypal</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                                aria-labelledby="home-tab" tabindex="0">
+                                <div class="row">
+                                    <div class="col-12 mt-3">
+                                        <label for="inputCardNumber" class="form-label">Card Number</label>
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Valid Card Number"
+                                            aria-label="Valid Card Number" aria-describedby="basic-addon2">
+                                        <span class="input-group-text bg-info" id="basic-addon2">
+                                            <i class="fa-solid fa-lock text-white"></i>
+                                        </span>
+                                    </div>
+                                    <div class="row mb-3 d-flex justify-content-between">
+                                        <div class="col-5">
+                                            <label for="formDate" class="form-label">Expiry Date</label>
+                                            <div class="d-flex">
+                                                <input type="text" class="form-control col" id="formDate"
+                                                    placeholder="MM">
+                                                <input type="text" class="form-control col ms-4" id="formDate"
+                                                    placeholder="YY">
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <label for="formCv" class="form-label">CV Code</label>
+                                            <input type="text" class="form-control" id="formCv" placeholder="CV">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label for="inputCardOwner" class="form-label">Card Owner</label>
+                                            <input type="text" class="form-control" id="inputCardOwner"
+                                                placeholder="Card Owner Name">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
+                                aria-labelledby="profile-tab" tabindex="0">
+                                Paypal Design
+                            </div>
+                        </div>
+                        <!-- Second Part end -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary bg-info text-white border-info ">Pay Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal end -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/3c69dc53a8.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
